@@ -1,0 +1,104 @@
+.banner-text {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.autosouq-logo {
+    background-image: url(../img/autosouq_logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin: 1rem;
+}
+
+.login-banner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.login-cta {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.input {
+    border: 1px solid #b7b9f0;
+    border-radius: 4rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+    width: 100%;
+}
+
+.input:hover {
+    border-color: white;
+    transition-duration: 0.2s;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input img {
+    max-height: 100%;
+    margin: 0.2rem;
+}
+
+input {
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.login-form-wrapper {
+    max-width: 60ch;
+}
+
+.assistance-links {
+    font-size: 0.65rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-weight: bold;
+}
+
+#submit-button {
+    background-color: white;
+    color: #1b2a49;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+#confirm-password-wrapper,
+#name-wrapper {
+    display: none;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .login-banner {
+        flex-direction: column;
+    }
+
+    .banner-text {
+        font-size: larger;
+    }
+
+    .login-form-wrapper {
+        display: block;
+        padding: 0.4rem;
+        width: calc(100% - 4rem);
+    }
+}

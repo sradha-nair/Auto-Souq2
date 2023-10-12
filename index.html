@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSouq</title>
+    <link rel="stylesheet" href="./assets/fonts/Satoshi_Complete/css/satoshi.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/landing.css">
+    <script src="/assets/js/hamburger.js"></script>
+</head>
+
+<body>
+    <nav>
+        <img src="./assets/img/autosouq_logo_with_bg.png">
+
+        <div class="nav-items">
+            <a href="#">About us</a>
+            <a href="#">New cars</a>
+            <a href="#">Used cars</a>
+            <a href="#">Luxury cars</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div id="hamburger">
+            <img src="./assets/img/hamburger.svg">
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="landing-banner">Your search for the ideal car ends here.</div>
+    </div>
+
+    <form method="GET" action="./search.html">
+        <div id="clear-filters" href="javascript:void(0)">Clear all</div>
+
+        <div class="search-filters">
+            <select name="make">
+                <option selected disabled value="None">Make</option>
+                <option>Toyota</option>
+                <option>Ferrari</option>
+            </select>
+            <select name="type">
+                <option selected disabled value="None">Type</option>
+                <option>SUV</option>
+                <option>Sedan</option>
+                <option>Hatchback</option>
+            </select>
+            <select name="kms-driven">
+                <option selected disabled value="None">KMs driven</option>
+                <option>0-10000</option>
+                <option>10001-20000</option>
+                <option>20001-50000</option>
+                <option>50001-100000</option>
+                <option>100001+</option>
+            </select>
+        </div>
+
+        <div class="search-group">
+            <input type="text" name="keywords" placeholder="Search keywords">
+            <input type="submit" value="&#x1f50d;">
+        </div>
+    </form>
+
+    <footer>
+        <div class="footer-groups">
+            <div id="misc-links">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+            <div id="socials">
+                <div class="follow-us-banner">Follow us</div>
+                <ul>
+                    <li><img src="./assets/img/facebook_logo.png"> <span class="socials-label">Facebook</span></li>
+                    <li><img src="./assets/img/twitter_logo.png"> <span class="socials-label">Twitter</span></li>
+                    <li><img src="./assets/img/instagram_logo.png"><span class="socials-label">Instagram</span></li>
+                    <li><img src="./assets/img/linkedin_logo.png"> <span class="socials-label">LinkedIn</span></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <ul>
+                    <li>
+                        Subscribe to our newsletter
+                        <div>
+                            <input type="email">
+                            <input type="submit" value="OK">
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>Call us: 86757 37202</li>
+                    <li>Email: admin@example.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const [clear, make, type, kms, input] =
+            ['#clear-filters', 'select[name=make]', 'select[name=type]', 'select[name=kms-driven]', 'input[name=keywords]']
+                .map(s => document.querySelector(s));
+        clear.onclick = () => {
+            make.value = type.value = kms.value = "None";
+            input.value = '';
+        }
+    </script>
+</body>
+
+</html>

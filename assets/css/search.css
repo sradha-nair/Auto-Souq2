@@ -1,0 +1,59 @@
+nav {
+    min-height: 7ch;
+    background-color: inherit;
+    color: inherit;
+}
+
+body {
+    display: block;
+}
+
+.autosouq-logo {
+    background-image: url(../img/autosouq_logo_with_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.nav-items,
+#hamburger {
+    margin-left: auto;
+}
+
+#filters {
+    width: 25vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f4f4f4;
+    border-radius: 0 20px 20px 0;
+}
+
+.content {
+    margin-left: calc(25vw + 2rem);
+    margin-right: 2rem;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    nav {
+        min-height: 5ch;
+    }
+
+    .content {
+        margin: 0.5rem;
+    }
+
+    #filters {
+        display: none;
+    }
+
+    .nav-items {
+        background-color: white;
+        color: black;
+    }
+}

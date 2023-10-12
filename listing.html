@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSouq - view listing</title>
+    <link rel="stylesheet" href="./assets/fonts/Satoshi_Complete/css/satoshi.css">
+    <link rel="stylesheet" href="./assets/fonts/Fugaz_One/css/fugaz-one.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/listing.css">
+    <script src="/assets/js/hamburger.js"></script>
+</head>
+
+<body>
+    <nav>
+        <img src="./assets/img/autosouq_logo_with_bg.png">
+
+        <div class="nav-items">
+            <a href="#">About us</a>
+            <a href="#">New cars</a>
+            <a href="#">Used cars</a>
+            <a href="#">Luxury cars</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div id="hamburger">
+            <img src="./assets/img/hamburger-white.svg">
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1 class="car-name">Ferrari F50</h1>
+        <div class="album-wrapper"></div>
+
+        <h2>Item overview</h2>
+
+        <div class="badges">
+            <div class="badge">
+                <div class="badge-title">Trim</div>
+                <div class="badge-info">[Not specified]</div>
+            </div>
+            <div class="badge">
+                <div class="badge-title">Year</div>
+                <div class="badge-info">1996</div>
+            </div>
+            <div class="badge">
+                <div class="badge-title">Specs</div>
+                <div class="badge-info">GCC</div>
+            </div>
+            <div class="badge">
+                <div class="badge-title">Kilometers</div>
+                <div class="badge-info">76,423</div>
+            </div>
+        </div>
+
+        <h2>Additional details</h2>
+
+        <table>
+            <tr>
+                <th>Body condition</th>
+                <td>Perfect</td>
+            </tr>
+
+            <tr>
+                <th>Body type</th>
+                <td>Sports car</td>
+            </tr>
+
+            <tr>
+                <th>Fuel type</th>
+                <td>Petrol</td>
+            </tr>
+
+            <tr>
+                <th>Seller type</th>
+                <td>Dealer</td>
+            </tr>
+
+            <tr>
+                <th>Horsepower</th>
+                <td>512 hp</td>
+            </tr>
+
+            <tr>
+                <th>Warranty</th>
+                <td>6 months</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <div class="footer-groups">
+            <div id="misc-links">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+            <div id="socials">
+                <div class="follow-us-banner">Follow us</div>
+                <ul>
+                    <li><img src="./assets/img/facebook_logo.png"> <span class="socials-label">Facebook</span></li>
+                    <li><img src="./assets/img/twitter_logo.png"> <span class="socials-label">Twitter</span></li>
+                    <li><img src="./assets/img/instagram_logo.png"><span class="socials-label">Instagram</span></li>
+                    <li><img src="./assets/img/linkedin_logo.png"> <span class="socials-label">LinkedIn</span></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <ul>
+                    <li>
+                        Subscribe to our newsletter
+                        <div>
+                            <input type="email">
+                            <input type="submit" value="OK">
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>Call us: 86757 37202</li>
+                    <li>Email: admin@example.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { Gallery } from "./assets/js/gallery.js";
+        const g = Gallery(...new Array(4).fill('./assets/img/ferrari').map((itm, i) => `${itm}_${i + 1}.png`));
+        document.querySelector('.album-wrapper').appendChild(g);
+    </script>
+</body>
+
+</html>

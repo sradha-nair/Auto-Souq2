@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSouq - login</title>
+    <link rel="stylesheet" href="./assets/fonts/Satoshi_Complete/css/satoshi.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="login-banner">
+            <div class="banner-text">Welcome to</div>
+            <div class="autosouq-logo" style="width: 20vmax; height: 8ch;"></div>
+        </div>
+
+        <div class="login-form-wrapper">
+            <div class="login-cta">Log in</div>
+
+            <form>
+                <div class="input" id="name-wrapper">
+                    <img src="./assets/img/email-icon.svg">
+                    <label class="hidden" for="name">Your name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+
+                <div class="input">
+                    <img src="./assets/img/email-icon.svg">
+                    <label class="hidden" for="email">Your registered email address</label>
+                    <input type="text" id="email" placeholder="Your registered email address">
+                </div>
+
+                <div class="input">
+                    <img src="./assets/img/password-icon.svg">
+                    <label class="hidden" for="password">Enter your password</label>
+                    <input type="password" id="password" placeholder="Your password">
+                </div>
+
+                <div class="input" id="confirm-password-wrapper">
+                    <img src="./assets/img/password-icon.svg">
+                    <label class="hidden" for="confirm-password">Confirm password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm password">
+                </div>
+
+                <div class="assistance-links">
+                    <a id="forgot-password" href="javascript:void(0)">Forgot password?</a>
+                    <a id="toggle-form" href="javascript:void(0)">Need an account?</a>
+                </div>
+
+                <input id="submit-button" class="input" type="submit" value="Log in">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            By clicking Continue, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy
+                Policy</a>
+            and
+            understand that we will create an account linked to your email address.
+        </p>
+
+        <p>
+            <a href="#">Personal information collection statement</a>
+        </p>
+    </footer>
+
+    <script>
+        let isRegister = false;
+        const getCta = () => isRegister ? 'Sign up' : 'Log in';
+        const getLinkText = () => isRegister ? 'Already have an account?' : 'Need an account?';
+
+        const [link, cta, button, nameWrapper, confirmPassword] =
+            ["#toggle-form", ".login-cta", "#submit-button", "#name-wrapper", "#confirm-password-wrapper"]
+                .map(s => document.querySelector(s));
+
+        link.onclick = () => {
+            isRegister = !isRegister;
+            [nameWrapper, confirmPassword].forEach(elt => {
+                elt.style.display = isRegister ? 'flex' : 'none'
+            })
+
+            cta.innerHTML = button.value = getCta();
+            link.innerHTML = getLinkText();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1b2a49;
+    color: white;
+}
+
+nav {
+    background-color: white;
+    color: black;
+    width: calc(100% - 2rem);
+    max-height: 7ch;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-items {
+    background-color: inherit;
+    color: inherit;
+}
+
+.nav-items a {
+    text-decoration: none;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#hamburger {
+    display: none;
+    padding: 0.5rem;
+    margin-left: auto;
+}
+
+nav>:nth-child(2) {
+    margin-left: auto;
+}
+
+nav img {
+    max-height: 80%;
+}
+
+nav>img {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    width: calc(100% - 1rem);
+    font-size: 0.9rem;
+    background-color: #252020;
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    margin-top: auto;
+}
+
+:root {
+    font-size: 24px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 0.2rem;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+footer input[type=submit] {
+    background-color: #007bff;
+    border-radius: 10px;
+    color: white;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    min-width: 7ch;
+}
+
+footer input[type=email] {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+a,
+a:visited,
+a:active,
+a:link {
+    color: inherit !important;
+}
+
+input:focus {
+    outline: none;
+}
+
+* {
+    font-family: 'Satoshi-Variable';
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 80ch;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 2rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    #hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-items {
+        display: none;
+        top: 5ch;
+        position: absolute;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-items a {
+        text-align: center;
+        margin: 0.2rem;
+    }
+
+    nav {
+        max-height: 5ch;
+    }
+}
+
+.footer-groups {
+    display: flex;
+    align-items: center;
+}
+
+.footer-groups ul {
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.footer-groups ul>li {
+    text-align: left;
+    font-style: italic;
+}
+
+#misc-links,
+#socials {
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#socials li {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.socials-label {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#contact li {
+    margin: 0.5rem;
+}
+
+.footer-groups ul>li:not(:first-child):not(:last-child) {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer-groups a {
+    text-decoration: none;
+}
+
+.follow-us-banner {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: uppercase;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes grow-nav {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: calc(100% - 5ch);
+    }
+}
+
+@keyframes shrink-nav {
+    from {
+        height: calc(100% - 5ch);
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .footer-groups {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    #contact,
+    #socials,
+    #misc-links {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    #socials {
+        flex-direction: column;
+    }
+
+    .follow-us-banner {
+        writing-mode: horizontal-tb;
+    }
+
+    #contact li {
+        text-align: center;
+    }
+}
