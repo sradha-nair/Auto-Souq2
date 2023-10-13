@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSouq - search</title>
+    <link rel="stylesheet" href="./assets/fonts/Satoshi_Complete/css/satoshi.css">
+    <link rel="stylesheet" href="./assets/fonts/Fugaz_One/css/fugaz-one.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
+    <script src="/assets/js/hamburger.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="nav-logo" class="autosouq-logo" style="width: 20%; height: 5ch"></div>
+
+        <div class="nav-items">
+            <a href="#">About us</a>
+            <a href="#">New cars</a>
+            <a href="#">Used cars</a>
+            <a href="#">Luxury cars</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div id="hamburger">
+            <img src="./assets/img/hamburger-white.svg">
+        </div>
+    </nav>
+
+    <div id="filters">
+        <div class="autosouq-logo" style="width: 100%; height: 12%"></div>
+        <div class="filters-title-wrapper">
+            <div class="filters-title">Filters <img src="./assets/img/filters-icon.svg"></div>
+            <div class="filters-remove">Clear all</div>
+        </div>
+        <form class="filters-wrapper">
+            <div class="filter-group">
+                <label for="city-select">City</label>
+                <select name="city" id="city-select">
+                    <option selected disabled value="None">Select</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="make-select">Makes</label>
+                <select name="make" id="make-select">
+                    <option selected disabled value="None">Select</option>
+                </select>
+            </div>
+
+            <div class="filter-group range-group">
+                <div>Years</div>
+                <div class="range-group-container">
+                    <label for="year-from" class="hidden">From year</label>
+                    <select name="year-from" id="year-from">
+                        <option selected>All</option>
+                    </select>
+                    <span>to</span>
+                    <label for="year-to" class="hidden">To year</label>
+                    <select name="year-to" id="year-to">
+                        <option selected>All</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="model-select">Models</label>
+                <select name="model" id="model-select">
+                    <option selected disabled value="None">Select</option>
+                </select>
+            </div>
+
+            <div class="filter-group range-group">
+                <div>Price</div>
+                <div class="range-group-container">
+                    <label for="price-from" class="hidden">Minimum price</label>
+                    <select name="price-from" id="price-from">
+                        <option selected>All</option>
+                    </select>
+                    <span>to</span>
+                    <label for="price-to" class="hidden">Maximum price</label>
+                    <select name="price-to" id="price-to">
+                        <option selected>All</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group range-group">
+                <div>Mileage</div>
+                <div class="range-group-container">
+                    <label for="mileage-from" class="hidden">Minimum mileage</label>
+                    <select name="mileage-from" id="mileage-from">
+                        <option selected>All</option>
+                    </select>
+                    <span>to</span>
+                    <label for="mileage-to" class="hidden">Maximum mileage</label>
+                    <select name="mileage-to" id="mileage-to">
+                        <option selected>All</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="make-select">Body type</label>
+                <select name="body-type" id="body-type-select">
+                    <option selected disabled value="None">Select</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="make-select">Specs</label>
+                <select name="make" id="make-select">
+                    <option selected disabled value="None">Select</option>
+                    <option>GCC</option>
+                    <option>American</option>
+                </select>
+            </div>
+
+            <div class="filters-group submit-group">
+                <button class="button" id=close-filters type="button">Close</button>
+                <input class=button type="submit" value="Apply" id="apply-filters">
+            </div>
+        </form>
+    </div>
+
+    <div class="content">
+        <p>
+            <a href="javascript:void(0)" id="filters-link">Filters</a>
+        </p>
+
+        <div class="search-result">
+            <div class="result-img">
+                <img src="./assets/img/corolla.png">
+            </div>
+
+            <div class="result-info">
+                <div class="result-name">Toyota Corolla</div>
+                <div class="result-rating">⭐ 5.0 (10)</div>
+                <div class="result-metadata">
+                    <div class="result-meta-badge">
+                        <img class="result-icon" src="./assets/img/calendar.svg">
+                        <span>2022</span>
+                    </div>
+                    <div class="result-meta-badge">
+                        <img class="result-icon" src="./assets/img/speedo.svg">
+                        <span>76403 km</span>
+                    </div>
+                    <div class="result-meta-badge">
+                        <img class="result-icon" src="./assets/img/fuel.svg">
+                        <span>Petrol</span>
+                    </div>
+                </div>
+                <div class="result-specs">
+                    <img class="result-icon" src="./assets/img/car.svg">
+                    <span>GCC</span>
+                </div>
+                <div class="result-specs">
+                    <img class="result-icon" src="./assets/img/location.svg">
+                    <span>Location</span>
+                </div>
+                <div class="result-price">
+                    <button class="button" type="button">$20000</button>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+    <script>
+        const filterLink = document.querySelector("#filters-link");
+        const filters = document.querySelector('#filters');
+        const closeFilters = document.querySelector('#close-filters');
+        filterLink.onclick = () => {
+            filters.style.display = 'block';
+        }
+
+        closeFilters.onclick = () => {
+            filters.style.display = 'none';
+        }
+
+        const mql = window.matchMedia('(min-aspect-ratio: 1/1)');
+        mql.addEventListener('change', (e) => {
+            if (mql.matches) {
+                filters.style.display = 'block';
+            }
+        })
+    </script>
+</body>
+
+</html>
