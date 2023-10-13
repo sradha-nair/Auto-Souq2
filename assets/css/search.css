@@ -118,6 +118,7 @@ body {
     align-items: center;
     gap: 1rem;
     line-height: 1.4rem;
+    max-width: 50ch;
 }
 
 .result-info>div {
@@ -127,6 +128,7 @@ body {
 .result-info {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .result-name {
@@ -185,6 +187,7 @@ body {
 
     .content {
         margin: 0.5rem;
+        max-width: 95%;
     }
 
     #filters {
@@ -209,12 +212,10 @@ body {
         font-size: 0.8rem;
     }
 
-    .content {
-        max-width: 90%;
-    }
-
     .search-result {
         align-self: center;
+        flex-direction: column;
+        width: 100%;
     }
 
     .result-info>div {
