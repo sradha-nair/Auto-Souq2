@@ -1,18 +1,19 @@
 .landing-banner {
-    text-transform: capitalize;
     font-size: 1.5rem;
     margin-top: 2.5rem;
+    font-weight: bold;
 }
 
-.search-filters {
-    background-color: rgba(255, 255, 255, 0.2);
+.search-filters {   
+    background-color: #112d4e9f;
+    backdrop-filter: saturate(180%) blur(10px);
     padding: 1rem;
     border-radius: 0.4rem;
     display: flex;
 }
 
 .search-group {
-    background-color: white;
+    background-color: #dbe2ef;
     border-radius: 60px;
     display: flex;
     justify-content: space-between;
@@ -21,7 +22,7 @@
 
 .search-group input[type=submit] {
     border-radius: 60px;
-    background-color: #007bff;
+    background-color: #3f71afab;
     padding: 0.4rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -34,19 +35,19 @@
 
 .search-filters,
 .search-group {
-    border: 1px solid #b7b9f0;
+    border: 1px solid #00000011;
     margin: 1rem;
 }
 
 input,
 select {
     font-size: 1rem;
-    color: black;
+    color: rgb(248, 238, 238);
 }
 
 select {
     margin: 0.5rem;
-    background-color: #caf0f8;
+    background-color: #475e88;
     border: none;
     border-radius: 10px;
     padding: 0.4rem;
