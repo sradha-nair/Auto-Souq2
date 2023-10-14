@@ -1,6 +1,7 @@
 .banner-text {
     text-transform: uppercase;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .autosouq-logo {
@@ -9,11 +10,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    margin: 1rem;
 }
 
 .login-banner {
     display: flex;
+    font-weight: bold;
     align-items: center;
     width: 100%;
     justify-content: center;
@@ -28,14 +29,15 @@
 }
 
 .input {
-    border: 1px solid #b7b9f0;
+    border: 1px solid #3f72af;
     border-radius: 4rem;
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.4rem;
     margin-top: 0.4rem;
-    width: 100%;
+    width: 90%;
+    color:#3f72af;
 }
 
 .input:hover {
@@ -52,15 +54,17 @@ form {
 .input img {
     max-height: 100%;
     margin: 0.2rem;
+    color: #3f72af;
 }
 
 input {
-    width: 100%;
+    width: 90%;
     font-size: 0.8rem;
 }
 
 .login-form-wrapper {
-    max-width: 60ch;
+    width: 30ch;
+    padding: 3vw;
 }
 
 .assistance-links {
@@ -72,8 +76,8 @@ input {
 }
 
 #submit-button {
-    background-color: white;
-    color: #1b2a49;
+    background-color: #3f72af;
+    color: white;
     margin-top: 2rem;
     font-weight: bold;
 }
@@ -86,10 +90,12 @@ input {
 @media screen and (max-aspect-ratio: 1/1) {
     .login-banner {
         flex-direction: column;
+        font-weight: bold;
     }
 
     .banner-text {
         font-size: larger;
+        font-weight: bold;
     }
 
     .login-form-wrapper {

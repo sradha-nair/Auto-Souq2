@@ -1,63 +1,104 @@
+
+body {
+    display: block;
+    background-image: linear-gradient(
+        rgb(255, 255, 255), 
+        rgb(255, 255, 255)
+      );
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+    color: rgb(31, 29, 29);  
+}
+
+
 nav {
-    min-height: 7ch;
+    background-color: #112d4e;
+    color: white;
+    width: calc(100% - 2rem);
+    height: 5ch;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.logo{
+    height: 5vh;
+    width: auto;
+}
+
+.nav-items {
     background-color: inherit;
     color: inherit;
 }
 
-body {
-    display: block;
+.nav-items a {
+    text-decoration: none;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
-.autosouq-logo {
-    background-image: url(../img/autosouq_logo_with_bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-.nav-items,
 #hamburger {
+    display: none;
+    padding: 0.5rem;
     margin-left: auto;
 }
 
+nav>:nth-child(2) {
+    margin-left: auto;
+}
+
+nav img {
+    max-height: 80%;
+}
+
+nav>img {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
 #filters {
     width: calc(25vw - 2rem);
-    min-height: 100vh;
-    margin: 0;
+    min-height: 80vh;
+    margin-top: 1vh;
     padding: 0.4rem;
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #f4f4f4;
-    color: #1b2a49;
-    border-radius: 0 20px 20px 0;
+    top: 10;
+    margin-left: 1vw;
+    background-color: #3f72af;
+    color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    backdrop-filter: saturate(180%) blur(10px);
 }
 
 .filter-group {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
 }
 
 .filters-remove {
-    color: red;
-    font-size: 0.9rem;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .filters-title {
-    font-size: 1.3rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
 }
 
 .filters-title-wrapper {
-    margin: 0.8rem;
+    margin: 0.3rem;
 }
 
 .filters-title img {
-    height: 1.3rem;
+    height: 1.1rem;
     margin-left: 0.1rem;
 }
 
@@ -70,11 +111,14 @@ body {
 .content {
     margin-left: calc(25vw + 2rem);
     margin-right: 2rem;
+    font-size: 1rem;
+
 }
 
 #apply-filters {
     background-color: #1b2a49;
     margin-left: 0.4rem;
+    
 }
 
 .button {
@@ -82,6 +126,7 @@ body {
     border-radius: 0.2rem;
     padding: 0.4rem;
     border: none;
+    
 }
 
 #filters button {
@@ -94,7 +139,7 @@ body {
 }
 
 .result-price button {
-    background-color: #007cdf;
+    background-color: #000000;
     color: white;
 }
 
@@ -126,9 +171,15 @@ body {
 }
 
 .result-info {
+    color: rgb(0, 0, 0)    ;
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: #dbe2ef;
+    backdrop-filter: contrast(380%) blur(10px);
+    border-radius: 10px;
+    padding-top: 2%;
+
 }
 
 .result-name {
@@ -158,8 +209,7 @@ body {
 }
 
 #close-filters,
-#filters-link,
-#nav-logo {
+#filters-link{
     display: none;
 }
 
@@ -197,7 +247,7 @@ body {
 
     .nav-items {
         background-color: white;
-        color: black;
+        color: rgb(252, 247, 247);
     }
 
     #close-filters,
